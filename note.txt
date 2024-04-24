@@ -1,0 +1,4 @@
+Routes direct user requests to the appropriate controllers.
+Controllers handle the logic of what happens when a user makes a request.
+Models interact with the database to fetch, store, or update data.
+Middleware performs checks or processes that need to apply across multiple routes.
