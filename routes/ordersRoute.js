@@ -11,7 +11,7 @@ import {
 const orderRouter = express.Router();
 
 orderRouter.post("/", isLoggedIn, createOrderController);
-orderRouter.get("/", getAllordersController);
+orderRouter.get("/", isLoggedIn, getAllordersController);
 orderRouter.get("/sales/stats", isLoggedIn, getOrderStatsController);
 orderRouter.put("/:id", isLoggedIn, isAdmin, updateOrderController);
 orderRouter.get("/:id", isLoggedIn, isAdmin, getSingleOrderController);

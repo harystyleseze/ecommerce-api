@@ -23,8 +23,13 @@ dbConnect();
 const app = express();
 //pass incoming data
 app.use(express.json());
-
+//Serve statis files
+app.use(express.static("public"));
 //check and use the Routes
+//Home route
+app.get("/", (req, res) => {
+  res.sendFile(path.join("public", index.html));
+});
 app.use("/api/v1/users/", userRouter);
 app.use("/api/v1/products/", productsRouter);
 app.use("/api/v1/categories/", categoriesRouter);

@@ -19,7 +19,7 @@ productsRouter.post(
   upload.single("file"),
   createProductController
 );
-productsRouter.get("/", getProductsController);
+productsRouter.get("/", isLoggedIn, getProductsController);
 productsRouter.get("/:id", getProductController);
 productsRouter.put("/:id", isLoggedIn, isAdmin, updateProductController);
 productsRouter.delete("/:id", isLoggedIn, isAdmin, deleteProductController);
