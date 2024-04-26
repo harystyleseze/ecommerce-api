@@ -16,7 +16,7 @@ Before starting, ensure you have installed:
 - npm (comes with Node.js)
 - MongoDB
 
-##API Documentation
+## API Documentation
 
 - [Find the documentation here](https://nodejs-ecommerce-api-4105.onrender.com/)
 
